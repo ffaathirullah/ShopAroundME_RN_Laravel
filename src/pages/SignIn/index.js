@@ -6,7 +6,7 @@ const SignIn = () => {
 
   return (
     <View style={styles.page}>
-      <Header title="Sign In" subTitle="Find your best ever meal" />
+      <Header title="Sign In" subtitle="Find your best ever meal" />
       <View style={styles.container}>
         <TextInput
           label="Email Address"

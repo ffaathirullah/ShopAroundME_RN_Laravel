@@ -5,6 +5,7 @@ import {Logo} from '../../assets';
 const SplashScreen = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
+      navigation.replace("SignIn");
     }, 2000);
   }, []);
 
