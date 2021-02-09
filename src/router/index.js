@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {
   SignIn,
-  SplashScreen
+  SplashScreen,
+  SignUp
 } from '../pages';
 import {
   View,
@@ -25,6 +26,11 @@ const Router = () => {
         component={SignIn}
         options={{headerShown: false}}
       />
+      <Stack.Screen
+    name="SignUp"
+    component={SignUp}
+    options={{headerShown: false}}
+  />
     </Stack.Navigator>
   );
 };

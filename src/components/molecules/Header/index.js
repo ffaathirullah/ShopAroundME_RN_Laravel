@@ -1,13 +1,20 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {IconBack} from '../../../assets';
+import {Icon_back} from '../../../assets';
 
-const Header = (props) => {
+const Header = ({title, subTitle, onBack}) => {
   return (
     <View style={styles.container}>
-    <View>
-        <Text style={styles.title}>{props.title}</Text>
-        <Text style={styles.subTitle}>{props.subtitle}</Text>
+      {onBack && (
+        <TouchableOpacity activeOpacity={0.7} onPress={onBack}>
+          <View style={styles.back}>
+            <Icon_back />
+          </View>
+        </TouchableOpacity>
+      )}
+      <View>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.subTitle}>{subTitle}</Text>
       </View>
     </View>
   );
@@ -18,17 +25,17 @@ export default Header;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
-    paddingHorizontal: 23,
-    paddingTop: 29,
-    paddingBottom: 25,
+    paddingHorizontal: 24,
+    paddingTop: 30,
+    paddingBottom: 24,
     flexDirection: 'row',
     alignItems: 'center',
   },
-  title: {fontSize: 23, color: '#020202'},
-  subTitle: {fontSize: 12, color: '#8D92A3'},
+  title: {fontSize: 22, fontFamily: 'Poppins-Medium', color: '#020202'},
+  subTitle: {fontSize: 14, fontFamily: 'Poppins-Light', color: '#8D92A3'},
   back: {
-    padding: 15,
-    marginRight: 15,
-    marginLeft: -11,
+    padding: 16,
+    marginRight: 16,
+    marginLeft: -10,
   },
 });

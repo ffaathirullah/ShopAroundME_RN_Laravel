@@ -1,12 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Button,Gap, Header, TextInput} from '../../components';
 
-const SignIn = () => {
-
+const SignIn = ({navigation}) => {
   return (
     <View style={styles.page}>
-      <Header title="Sign In" subtitle="Find your best ever meal" />
+      <Header title="Sign In" subTitle="Find your best ever meal" />
       <View style={styles.container}>
         <TextInput
           label="Email Address"
@@ -25,6 +24,7 @@ const SignIn = () => {
           text="Create New Account"
           color="#8D92A3"
           textColor="white"
+          onPress={() =>  navigation.navigate("SignUp")}
         />
       </View>
     </View>
