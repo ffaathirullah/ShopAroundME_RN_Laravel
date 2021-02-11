@@ -5,7 +5,7 @@ import {Button,Gap, Header, TextInput} from '../../components';
 const SignIn = ({navigation}) => {
   return (
     <View style={styles.page}>
-      <Header title="Sign In" subTitle="Find your best ever meal" />
+      <Header title="Sign In" subTitle="Find your best Items" />
       <View style={styles.container}>
         <TextInput
           label="Email Address"

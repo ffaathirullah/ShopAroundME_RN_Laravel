@@ -46,7 +46,7 @@ const SignUp = ({navigation}) => {
             placeholder="Type your password"
           />
           <Gap height={24} />
-          <Button text="Continue" />
+          <Button text="Continue" onPress={() =>  navigation.navigate("SignUpAddress")} />
         </View>
       </View>
     </ScrollView>
